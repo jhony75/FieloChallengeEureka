@@ -13,6 +13,7 @@ const auth = () =>
     },
   }).then((resp) => {
     token = resp.data.token;
+    console.log(token);
   });
 
 const users = () =>
@@ -23,7 +24,6 @@ const users = () =>
       'x-access-token': token,
     },
   }).then((resp) => {
-    console.log(token);
     console.table(resp.data);
   });
 
