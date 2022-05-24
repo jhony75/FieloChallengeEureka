@@ -1,26 +1,16 @@
-import {
-  Auth,
-  Users,
-  UserById,
-  UserActivities,
-  Programs,
-  ProgramsLevels,
-  Levels,
-} from './api/fieloRequest';
-
+import Card from './components/card/Card';
 import './styles/global.scss';
+import styles from './app.module.scss';
 
 export default function App() {
   return (
     <>
       <h1>Inside Query Client</h1>
-      <Auth />
-      <Users />
-      <UserById />
-      <UserActivities />
-      <Programs />
-      <ProgramsLevels />
-      <Levels />
+      <div className={styles.cardsContainer}>
+        <Card content="card" />
+        <Card content="card" />
+        <Card content="card" />
+      </div>
     </>
   );
 }
