@@ -1,9 +1,9 @@
 import styles from './card.module.scss';
 
-function Card({ content }) {
+function Card({ children }) {
   return (
     <div className={styles.container}>
-      <span className={styles.description}>{content}</span>
+      <span className={styles.description}>{children}</span>
     </div>
   );
 }
