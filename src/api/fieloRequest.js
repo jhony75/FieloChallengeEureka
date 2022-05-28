@@ -3,7 +3,6 @@ import axios from 'axios';
 const baseURL = 'https://challenge-fielo.herokuapp.com';
 let token = '';
 
-// TODO: Update the error handling to run auth() in case of a 401 error.
 // REFACTOR: Create an Axios instance to avoid code replication.
 
 const auth = () =>
