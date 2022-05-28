@@ -8,4 +8,4 @@ function Card({ children }) {
   );
 }
 
-export default Card;
+export { Card };
