@@ -1,33 +1,27 @@
 import { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
+import { authToken } from '../../api/authRequest';
 import { FieloService } from '../../api/fieloService';
 
 import { Card } from '../card/Card';
 
 const UsersList = () => {
-  const [image, setImage] = useState('');
-  const [names, setNames] = useState([]);
+  let flag;
 
-  useEffect(() => {
-    FieloService.getUserByID('a3276e5b-d846-435c-8a86-feb6189374b3').then(
-      (response) => {
-        setImage(response);
-      }
-    );
-  }, []);
+  if (authToken != undefined) {
+    flag = true;
+  }
 
-  useEffect(() => {
-    FieloService.getAllUsers().then((response) => {
-      setNames(Object.keys(response));
-    });
-  }, []);
+  const { data } = useQuery('users', FieloService.getAllUsers, {
+    enabled: flag != undefined,
+    retry: Infinity,
+  });
+  console.log(`Flag: ${flag}`);
+  console.dir(`Data: ${data}`);
 
   return (
     <Card>
-      <img src={image} alt={names} />
-      {names.map((name) => (
-        <p>{name}</p>
-      ))}
+      <h1>Test</h1>
     </Card>
   );
 };

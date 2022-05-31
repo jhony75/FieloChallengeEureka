@@ -6,13 +6,15 @@ import { Main } from './Main';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
+      staleTime: 10 * 60 * 1000,
+      cacheTime: 15 * 60 * 1000,
       refetchOnWindowFocus: false,
       retry: false,
     },
   },
 });
 
-export default function App() {
+const App = () => {
   return (
     <>
       <StrictMode>
@@ -23,4 +25,6 @@ export default function App() {
       </StrictMode>
     </>
   );
-}
+};
+
+export { App, queryClient };

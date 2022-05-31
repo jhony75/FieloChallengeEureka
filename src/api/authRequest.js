@@ -1,4 +1,4 @@
-let authToken = '';
+let authToken;
 
 const URL_TO_FETCH = 'https://challenge-fielo.herokuapp.com/auth';
 const HEADERS = new Headers({
@@ -9,7 +9,8 @@ const requestConfig = {
   method: 'post',
   headers: HEADERS,
 };
-const auth = () => {
+
+const auth = async () => {
   fetch(URL_TO_FETCH, requestConfig)
     .then(function (response) {
       response.json().then(function (data) {
