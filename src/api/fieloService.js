@@ -2,6 +2,9 @@ import { request } from './request';
 import { authToken as token } from './authRequest';
 
 class FieloService {
+  constructor() {
+    this.token = token;
+  }
   static getAllUsers() {
     return request({
       url: '/users',
