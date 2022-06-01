@@ -1,17 +1,19 @@
 {
-  "name": "01-github-explorer",
-  "version": "1.0.0",
+  "name": "fielo-challenge-ureka",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack serve",
-    "build": "cross-env NODE_ENV=production webpack"
+    "start:dev": "webpack serve",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "jest --watchAll --verbose"
   },
   "dependencies": {
     "@babel/preset-react": "^7.16.0",
+    "@types/jest": "^27.5.1",
     "axios": "^0.27.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0-next-e531a4a62-20220505",
+    "react-dom": "^18.2.0-next-e531a4a62-20220505",
     "react-query": "^3.39.0",
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
@@ -21,7 +23,7 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
     "babel-loader": "^8.2.3",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
@@ -36,8 +38,9 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.0",
     "prettier": "^2.6.2",
-    "react-refresh": "^0.5.3",
+    "react-refresh": "^0.11.0",
     "sass": "^1.44.0",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1"
