@@ -14,7 +14,7 @@ Utilizei React para a construção do projeto, criando manualmente as configura�
 
 Para estilos preferi usar SASS por não ver a necessidade de utilizar "styled-components" por conta do seu peso.
 
-Commits foram feitos seguindo os padrões de [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+Commits foram feitos seguindo os padrões de [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## Dependencias
 
