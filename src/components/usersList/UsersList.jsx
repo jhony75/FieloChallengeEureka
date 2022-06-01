@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { authToken } from '../../api/authRequest';
 import { FieloService } from '../../api/fieloService';
@@ -21,7 +20,7 @@ const UsersList = () => {
 
   return (
     <Card>
-      <h1>Test</h1>
+      <h1>Users List</h1>
     </Card>
   );
 };
