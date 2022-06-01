@@ -6,7 +6,7 @@ const client = (() => {
   });
 })();
 
-const request = async function (options, store) {
+const request = async function (options) {
   const onSuccess = function (response) {
     const {
       data: { message },
